@@ -9,9 +9,9 @@ const getButtonStyle = (isBold) => {
 const Button = ({name}) => {
     const [isTextBold, setIsTextBold] = React.useState(false)
 
-    const onClick = () => setIsTextBold(!isTextBold);
+    const onClick = () => setIsTextBold((current) => !current);
 
-    return <button onClick={onClick} style={getButtonStyle(isTextBold)}>name</button>;
+    return <button onClick={onClick} style={getButtonStyle(isTextBold)}>{name}</button>;
 }
 
 export default Button;

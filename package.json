@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "test"
+    "test": "browserify-test"
   },
   "author": "paleika",
   "license": "ISC",
@@ -21,6 +21,9 @@
     "babel-loader": "^8.2.2",
     "browser-run": "^9.0.0",
     "browserify": "^17.0.0",
+    "browserify-test": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "file-loader": "^6.2.0",
     "webpack": "^5.22.0",
     "webpack-cli": "^4.5.0",
