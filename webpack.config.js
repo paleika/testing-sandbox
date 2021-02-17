@@ -35,11 +35,7 @@ module.exports = {
     plugins: [
         new NodePolyfillPlugin()
     ],
-    resolve: {
-        fallback: {
-            "path": require.resolve("path-browserify"),
-        },
-    },
+    
 
     output: {
         filename: "[name].bundle.js",

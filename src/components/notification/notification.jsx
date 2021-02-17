@@ -9,8 +9,8 @@ const style = {
 
 const Notification = () => {
     return (
-        <div style={style}>
-            <Button name="Hit me" />
+        <div style={style} className="notification-component">
+            <Button name="Get Started" />
         </div>
     );
 }
