@@ -8,4 +8,4 @@
     "ui": "bdd",
     "watch": true,
     "watch-files": ["src/**/*.js", "src/**/*.jsx"]
-  }
+}

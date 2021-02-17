@@ -6,7 +6,8 @@
     "start": "webpack serve --open",
     "build": "webpack",
     "test": "mocha ./src",
-    "browser": "browser-sync src test -f 'src' -f 'test' --index dist/index.html -b='google-chrome' --server"
+    "browser": "browser-sync src test -f 'src' -f 'test' --index dist/index.html -b='google-chrome' --server",
+    "test:server": "webpack serve --config ./webpack.test-config.js"
   },
   "author": "paleika",
   "license": "ISC",
@@ -22,13 +23,17 @@
     "@babel/register": "^7.12.13",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.14",
+    "buffer": "^6.0.3",
     "chai": "^4.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "file-loader": "^6.2.0",
     "jsdom": "^16.4.0",
     "mocha": "^8.3.0",
+    "mocha-loader": "^5.1.5",
     "react-addons-test-utils": "^15.6.2",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.3",
     "webpack": "^5.22.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
