@@ -1,0 +1,11 @@
+{
+    "diff": true,
+    "extension": ["js", "jsx"],
+    "package": "./package.json",
+    "recursive": true,
+    "reporter": "spec",
+    "require": ["@babel/register", "./test/setupTests.js"],
+    "ui": "bdd",
+    "watch": true,
+    "watch-files": ["src/**/*.js", "src/**/*.jsx"]
+  }
