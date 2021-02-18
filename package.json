@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "HEADLESS=false jest --watch"
+    "test": "HEADLESS=true jest",
+    "test:debug": "HEADLESS=false jest --watch -o"
   },
   "author": "paleika",
   "license": "ISC",

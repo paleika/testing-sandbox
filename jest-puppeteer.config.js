@@ -4,7 +4,9 @@ module.exports = {
     devtools: process.env.HEADLESS === 'false'
   },
   server: {
-    command: 'npm start',
+    command: 'webpack serve', // run webpack-dev-server in webpack-5 style
     port: 8080,
+    protocol: 'http',
+    usedPortAction: 'ignore'
   },
 }
