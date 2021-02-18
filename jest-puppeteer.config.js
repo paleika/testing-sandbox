@@ -1,7 +1,6 @@
 module.exports = {
-    server: {
-      command: 'npm start',
-      port: 8080,
-      debug: true,
-    },
+  launch: {
+    headless: process.env.HEADLESS !== 'false',
+    headless: process.env.HEADLESS === 'false'
   }
+}
