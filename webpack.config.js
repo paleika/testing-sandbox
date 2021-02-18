@@ -1,11 +1,12 @@
-const path = require('path')
+const path = require("path")
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
     entry: {
-        index: './src/index.js'
+        index: "./src/index.js"
     },
     mode: "development",
-    devtool: 'inline-source-map',
+    devtool: "inline-source-map",
     devServer: {
         contentBase: './dist',
     },
@@ -15,25 +16,29 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: "babel-loader"
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
                     { 
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
-                            outputPath: 'images',
-                            name: '[name]-[sha1:hash:7].[ext]'
+                            outputPath: "images",
+                            name: "[name]-[sha1:hash:7].[ext]"
                         }
                     }
                 ]
             }
         ]
     },
+    plugins: [
+        new NodePolyfillPlugin()
+    ],
+    
 
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: "[name].bundle.js",
+        path: path.resolve(__dirname, "dist"),
     }
 }
